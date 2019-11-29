@@ -1,0 +1,16 @@
+<h1>There are {{ count }} words in your text.</h1>
+
+<form action="{% url 'home' %}">
+    <input type="submit" value="Start again!" />
+</form>
+
+<h1>Your text: </h1>
+{{ fullText }}
+
+<h1>Word Count: </h1>
+{% for word, counttotal in wordDictionary %}
+
+{{ word }} - {{ counttotal }}
+<br/>
+
+{% endfor %}
